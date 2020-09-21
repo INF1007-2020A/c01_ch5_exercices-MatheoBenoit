@@ -38,7 +38,13 @@ def prime_integer_summation() -> int:
 
 
 def factorial(number: int) -> int:
-    return 0
+    valeur = 1
+    while (number >0):
+        valeur = number*valeur
+
+        number -=1
+
+    return valeur
 
 
 def use_continue() -> None:
@@ -46,7 +52,7 @@ def use_continue() -> None:
 
 
 def main() -> None:
-    print(f"La valeur absolue du nombre est {convert_to_absolute()}")
+    #print(f"La valeur absolue du nombre est {convert_to_absolute()}")
 
     print(f"La liste des noms générés avec les préfixes est: {use_prefixes()}")
 
