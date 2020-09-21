@@ -3,20 +3,38 @@
 
 
 from typing import List
-
+import math
 
 def convert_to_absolute() -> float:
-    return 0.0
+    x = float(input("Veuillez entrer un nombre:"))
+    return abs(x)
 
 
 def use_prefixes() -> List[str]:
-    prefixes, suffixes = 'JKLMNOP', 'ack'
+ prefixes, suffixes = 'JKLMNOPQ', 'ack'
 
-    return [""]
+ result = []
+ for r in prefixes:
+     result.append(r + suffixes)
+    
+ return result
 
 
 def prime_integer_summation() -> int:
-    return 0
+    liste = []
+    i = 2
+    while len(liste) < 100:
+        prime = True
+        for divider in range(2, int(math.sqrt((i))+ 1)):
+            if i % divider == 0:
+               prime = False
+
+        if prime:
+           liste.append(i)
+
+        i += 1   
+    
+    return sum(liste)
 
 
 def factorial(number: int) -> int:
